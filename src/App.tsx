@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-import { HomePage } from './Pages/HomePage';
+import { HomePage } from './pages/HomePage';
 import { Page } from './utils/types';
-import { ColorOnColorPage } from './Pages/ColorOnColorPage';
-import { ColorCreationPage } from './Pages/ColorCreation';
-import { ColorIdentificationPage } from './Pages/ColorIdentification';
+import { ColorOnColorPage } from './pages/ColorOnColorPage';
+import { ColorCreationPage } from './pages/ColorCreation';
+import { ColorIdentificationPage } from './pages/ColorIdentification';
+import AlbersFullLogo from './assets/AlbersFullLogo.png'
 
 function App() {
 
@@ -12,21 +13,27 @@ function App() {
 
     return (
         <div>
+            <img 
+                src={AlbersFullLogo} 
+                style={{ cursor: 'pointer' }}
+                alt="Full Logo" 
+                onClick={() => setCurrentPage(Page.HOME)}
+            />
             {
                 currentPage === Page.HOME &&
                 <HomePage setLevel={setCurrentPage}/>
             }
             {
                 currentPage === Page.COLOR_ON_COLOR &&
-                <ColorOnColorPage setLevel={setCurrentPage}/>
+                <ColorOnColorPage/>
             }
             {
                 currentPage === Page.COLOR_CREATION &&
-                <ColorCreationPage setLevel={setCurrentPage}/>
+                <ColorCreationPage/>
             }
             {
                 currentPage === Page.COLOR_IDENTIFICATION &&
-                <ColorIdentificationPage setLevel={setCurrentPage}/>
+                <ColorIdentificationPage/>
             }
         </div>
     )

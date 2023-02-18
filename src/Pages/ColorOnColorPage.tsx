@@ -1,11 +1,9 @@
-import { ComplementaryQuestionCard } from "../Components/ComplementaryQuestionCard"
-import { PrimarySecondaryTertiaryQuestionCard } from "../Components/PrimarySecondaryTertiaryQuestionCard"
+import { ComplementaryQuestionCard } from "../components/ComplementaryQuestionCard"
+import { PrimarySecondaryTertiaryQuestionCard } from "../components/PrimarySecondaryTertiaryQuestionCard"
 import { useMultiState } from "../hooks/useMultiState"
-import { ColorPageProps, Page } from "../utils/types"
-import backArrow from '../assets/backArrow.svg'
-import { TriadicQuestionCard } from "../Components/TriadicQuestionCard"
+import { TriadicQuestionCard } from "../components/TriadicQuestionCard"
 
-export const ColorOnColorPage = ({setLevel}: ColorPageProps) => {
+export const ColorOnColorPage = () => {
     
     const initialColorOnColorPageState = {
         questionsCorrect: 0,
@@ -33,12 +31,6 @@ export const ColorOnColorPage = ({setLevel}: ColorPageProps) => {
 
     return (
         <div>
-            <img 
-                src={backArrow} 
-                alt="Back Arrow" 
-                onClick={() => setLevel(Page.HOME)}
-                style={{ cursor: 'pointer' }}
-            />
             <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold' }}>
                 Color On Color
             </div>

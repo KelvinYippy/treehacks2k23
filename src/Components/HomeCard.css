@@ -1,10 +1,96 @@
-.home-card {
+.home-card-one {
     padding: 1rem;
     text-align: center;
     margin: 1rem;
     cursor: pointer;
+    border-radius: 10px;
+    background-color: #FFF4FA;
+    font-weight: bold;
+    height: 530px;
 }
 
-.home-card:hover {
+.home-card-one .subtext {
+    color: #FFF4FA;
+    font-size: 1.5rem;
+}
 
+.home-card-one:hover {
+    background-color: #FF289A;
+    color: #FFF4FA
+}
+
+.home-card-two {
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #FBF8EE;
+    font-weight: bold;
+    height: 530px;
+}
+
+.home-card-two .subtext {
+    color: #FBF8EE;
+    font-size: 1.5rem;
+}
+
+.home-card-two:hover {
+    background-color: #FFC700;
+    color: #FBF8EE;
+}
+
+.home-card-three {
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #E7F7F4;
+    font-weight: bold;
+    height: 530px;
+}
+
+.home-card-three:hover {
+    background-color: #00B78E;
+    color: #E7F7F4;
+}
+
+.home-card-three .subtext {
+    color: #E7F7F4;
+    font-size: 1.5rem;
+}
+
+
+.home-card-one .square-one {
+    height: 220px;
+    width: 220px;
+    background-color: #FF289A;
+    border-radius: 10px;
+}
+
+.home-card-one:hover > .square-one {
+    background-color: #FFF4FA !important;
+}
+
+.square-two {
+    height: 220px;
+    width: 220px;
+    background-color: #FFC700;
+    border-radius: 10px;
+}
+
+.home-card-two:hover > .square-two {
+    background-color: #FBF8EE !important;
+}
+
+.square-three {
+    height: 220px;
+    width: 220px;
+    background-color: #00B78E;
+    border-radius: 10px;
+}
+
+.home-card-three:hover > .square-three {
+    background-color: #E7F7F4;
 }

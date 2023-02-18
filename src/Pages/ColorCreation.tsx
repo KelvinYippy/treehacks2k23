@@ -1,11 +1,9 @@
-import { ColorDisplay } from "../Components/ColorDisplay"
-import { ColorPageProps, Page } from "../utils/types"
+import { ColorDisplay } from "../components/ColorDisplay"
 import { generateRandomRGBColor, getRGBComponents } from "../utils/utils"
-import backArrow from '../assets/backArrow.svg'
 import { useMultiState } from "../hooks/useMultiState"
 import { useEffect } from "react"
 
-export const ColorCreationPage = ({setLevel}: ColorPageProps) => {
+export const ColorCreationPage = () => {
 
     const initialColorCreationPageState = {
         red: "0",
@@ -29,7 +27,6 @@ export const ColorCreationPage = ({setLevel}: ColorPageProps) => {
             blue: Number(componentState.blue)
         }
         hashmap[property] = Number(value)
-        console.log(`${hashmap.red}, ${hashmap.yellow}, ${hashmap.blue}`, componentState.ryb)
         if (`${hashmap.red}, ${hashmap.yellow}, ${hashmap.blue}` === componentState.ryb) {
             handleIndividualChange("correctQuestions", componentState.correctQuestions + 1)
         }
@@ -43,6 +40,7 @@ export const ColorCreationPage = ({setLevel}: ColorPageProps) => {
         if (componentState.randomColor) {
             fetchCorrectRYBCode()
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [componentState.randomColor])
 
     useEffect(() => {
@@ -56,16 +54,11 @@ export const ColorCreationPage = ({setLevel}: ColorPageProps) => {
             yellow: "0",
             blue: "0",
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [componentState.correctQuestions])
 
     return (
         <div>
-            <img 
-                src={backArrow} 
-                alt="Back Arrow" 
-                onClick={() => setLevel(Page.HOME)}
-                style={{ cursor: 'pointer' }}
-            />
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '1rem' }}>
             <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold' }}>
                 Color Creation
