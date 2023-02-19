@@ -2,6 +2,7 @@ import { ColorDisplay } from "../components/ColorDisplay"
 import { generateRandomRGBColor, getRGBComponents } from "../utils/utils"
 import { useMultiState } from "../hooks/useMultiState"
 import { useEffect } from "react"
+import './ColorOnCardPage.css'
 
 export const ColorCreationPage = () => {
 
@@ -14,6 +15,7 @@ export const ColorCreationPage = () => {
         g: -1,
         b: -1,
         ryb: "",
+        currentrgb: "",
         correctQuestions: 0
     }
 
@@ -73,14 +75,17 @@ export const ColorCreationPage = () => {
                 <div style={{ paddingTop: '1rem' }}>
                     <ColorDisplay backgroundColor={`rgb(${componentState.r}, ${componentState.g}, ${componentState.b})`}/>
                 </div>
-                <div style={{ paddingTop: '1rem' }}>
+                <div style={{ paddingTop: '1rem', display: 'flex', justifyContent: 'space-between' }}>
                     <input type="range" defaultValue={componentState.red} value={componentState.red} min="0" max="255" onChange={(e) => handleChange("red", e.target.value)}/>
+                    <div className="red-slider"></div>
                 </div>
-                <div style={{ paddingTop: '1rem' }}>
+                <div style={{ paddingTop: '1rem', display: 'flex', justifyContent: 'space-between' }}>
                     <input type="range" defaultValue={componentState.yellow} value={componentState.yellow} min="0" max="255" onChange={(e) => handleChange("yellow", e.target.value)}/>
+                    <div className="yellow-slider"></div>
                 </div>
-                <div style={{ paddingTop: '1rem' }}>
+                <div style={{ paddingTop: '1rem', display: 'flex', justifyContent: 'space-between' }}>
                     <input type="range" defaultValue={componentState.blue} value={componentState.blue} min="0" max="255" onChange={(e) => handleChange("blue", e.target.value)}/>
+                    <div className="blue-slider"></div>
                 </div>
             </div>
         </div>

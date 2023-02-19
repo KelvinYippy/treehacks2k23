@@ -57,3 +57,21 @@
     background-color: #00B78E;
     color: #9AF3DF;
 }
+
+.red-slider {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.yellow-slider {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+}
+
+.blue-slider {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+}
