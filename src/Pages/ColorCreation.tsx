@@ -27,6 +27,7 @@ export const ColorCreationPage = () => {
             blue: Number(componentState.blue)
         }
         hashmap[property] = Number(value)
+        console.log(`${hashmap.red}, ${hashmap.yellow}, ${hashmap.blue}`, componentState.ryb)
         if (`${hashmap.red}, ${hashmap.yellow}, ${hashmap.blue}` === componentState.ryb) {
             handleIndividualChange("correctQuestions", componentState.correctQuestions + 1)
         }
@@ -60,8 +61,8 @@ export const ColorCreationPage = () => {
     return (
         <div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '1rem' }}>
-            <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold' }}>
-                Color Creation
+            <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', fontSize: '2.25rem' }}>
+                Mix and Match
             </div>
             <div style={{ paddingTop: '1rem', fontWeight: 'bold' }}>
                 Number Answered Correctly: {componentState.correctQuestions}
@@ -73,11 +74,8 @@ export const ColorCreationPage = () => {
                 Now, adjust the scales to what you think is the correct RYB value!
             </div>
             <input type="range" defaultValue={componentState.red} value={componentState.red} min="0" max="255" onChange={(e) => handleChange("red", e.target.value)}/>
-            <p>{componentState.red}</p>
             <input type="range" defaultValue={componentState.yellow} value={componentState.yellow} min="0" max="255" onChange={(e) => handleChange("yellow", e.target.value)}/>
-            <p>{componentState.yellow}</p>
             <input type="range" defaultValue={componentState.blue} value={componentState.blue} min="0" max="255" onChange={(e) => handleChange("blue", e.target.value)}/>
-            <p>{componentState.blue}</p>
         </div>
         </div>
     )

@@ -36,6 +36,8 @@ export const ColorOnColorPage = () => {
         handleAnswerHelper(componentState.questionsCorrect)
     }
 
+    const formatTimeRemaining = (time: number) => time < 10 ? `0${time}` : time.toString() 
+
     useEffect(() => {
         if (!componentState.choosingStage) {
             handleMultipleChange({
@@ -43,15 +45,7 @@ export const ColorOnColorPage = () => {
                 timeRemaining: componentState.timeLimit
             })
         }
-    }, [componentState.choosingStage])
-
-    // useEffect(() => {
-    //     if (!componentState.choosingStage) {
-    //         const timer = componentState.timeRemaining > 0 && setInterval(() => handleIndividualChange("timeRemaining", componentState.timeRemaining - 1), 1000);
-    //         return () => clearInterval(timer as NodeJS.Timer);
-    //     }
-    // }, [componentState.timeRemaining]);
-    
+    }, [componentState.choosingStage]) 
 
     return (
         <div>
@@ -63,7 +57,7 @@ export const ColorOnColorPage = () => {
                 <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
                     <div style={{ color: componentState.timeLimit === 0 ? "white" : "inherit", fontSize: '1.5rem', textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         {
-                            componentState.timeRemaining
+                            formatTimeRemaining(componentState.timeRemaining)
                         }
                     </div>
                     <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', fontSize: '2.25rem' }}>

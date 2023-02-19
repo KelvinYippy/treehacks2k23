@@ -63,7 +63,7 @@ export const ColorIdentificationPage = () => {
     return (
         <div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '1rem' }}>
-            <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold' }}>
+            <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', fontSize: '2.25rem' }}>
                 Color Identification
             </div>
             <div style={{ paddingTop: '1rem', fontWeight: 'bold' }}>

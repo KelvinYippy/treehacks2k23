@@ -8,3 +8,8 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.pst-button:hover {
+    background-color: black;
+    color: white;
+}
