@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { ColorDisplay } from '../components/ColorDisplay'
 import { useMultiState } from '../hooks/useMultiState'
 import { generateRandomRGBColor, getComplementColor, getRGBComponents, getRGBNumber } from '../utils/utils'
+import './Slider.css'
 
 export const ColorIdentificationPage = () => {
 
@@ -63,21 +64,27 @@ export const ColorIdentificationPage = () => {
     return (
         <div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '1rem' }}>
-            <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', fontSize: '2.25rem' }}>
+            <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', fontSize: '6rem' }}>
                 Fill In The Color
-            </div>
-            <div style={{ paddingTop: '1rem', fontWeight: 'bold' }}>
+            </div> 
+            <div style={{ fontWeight: 'bold' }}>
                 Number Answered Correctly: {componentState.correctQuestions}
+            </div>
+            <div style={{ paddingTop: '1rem' }}>
+                Adjust the scales to what you think is the correct RYB value for the following color's <i>complement</i>!
             </div>
             <div style={{ paddingTop: '1rem' }}>
                 <ColorDisplay backgroundColor={`rgb(${componentState.r}, ${componentState.g}, ${componentState.b})`}/>
             </div>
-            <div style={{ paddingTop: '1rem', fontWeight: 'bold' }}>
-                Now, adjust the scales to what you think is the correct RYB value for its <i>complement</i>!
+            <div style={{ paddingTop: '1rem' }}>
+                <input type="range" className='r-slider' defaultValue={componentState.red} value={componentState.red} min="0" max="255" onChange={(e) => handleChange("red", e.target.value)}/>
             </div>
-            <input type="range" defaultValue={componentState.red} value={componentState.red} min="0" max="255" onChange={(e) => handleChange("red", e.target.value)}/>
-            <input type="range" defaultValue={componentState.yellow} value={componentState.yellow} min="0" max="255" onChange={(e) => handleChange("yellow", e.target.value)}/>
-            <input type="range" defaultValue={componentState.blue} value={componentState.blue} min="0" max="255" onChange={(e) => handleChange("blue", e.target.value)}/>
+            <div style={{ paddingTop: '1rem' }}>
+                <input type="range" className='y-slider' defaultValue={componentState.yellow} value={componentState.yellow} min="0" max="255" onChange={(e) => handleChange("yellow", e.target.value)}/>
+            </div>
+            <div style={{ paddingTop: '1rem' }}>
+                <input type="range" className='b-slider' defaultValue={componentState.blue} value={componentState.blue} min="0" max="255" onChange={(e) => handleChange("blue", e.target.value)}/>
+            </div>
         </div>
         </div>
     )

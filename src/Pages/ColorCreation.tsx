@@ -61,22 +61,28 @@ export const ColorCreationPage = () => {
     return (
         <div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '1rem' }}>
-            <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', fontSize: '2.25rem' }}>
-                Mix and Match
+                <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', fontSize: '6rem' }}>
+                    Mix and Match
+                </div>
+                <div style={{ paddingTop: '1rem', fontWeight: 'bold' }}>
+                    Number Answered Correctly: {componentState.correctQuestions}
+                </div>
+                <div style={{ paddingTop: '1rem' }}>
+                    Now, adjust the scales to what you think is the correct RYB value!
+                </div>
+                <div style={{ paddingTop: '1rem' }}>
+                    <ColorDisplay backgroundColor={`rgb(${componentState.r}, ${componentState.g}, ${componentState.b})`}/>
+                </div>
+                <div style={{ paddingTop: '1rem' }}>
+                    <input type="range" defaultValue={componentState.red} value={componentState.red} min="0" max="255" onChange={(e) => handleChange("red", e.target.value)}/>
+                </div>
+                <div style={{ paddingTop: '1rem' }}>
+                    <input type="range" defaultValue={componentState.yellow} value={componentState.yellow} min="0" max="255" onChange={(e) => handleChange("yellow", e.target.value)}/>
+                </div>
+                <div style={{ paddingTop: '1rem' }}>
+                    <input type="range" defaultValue={componentState.blue} value={componentState.blue} min="0" max="255" onChange={(e) => handleChange("blue", e.target.value)}/>
+                </div>
             </div>
-            <div style={{ paddingTop: '1rem', fontWeight: 'bold' }}>
-                Number Answered Correctly: {componentState.correctQuestions}
-            </div>
-            <div style={{ paddingTop: '1rem' }}>
-                <ColorDisplay backgroundColor={`rgb(${componentState.r}, ${componentState.g}, ${componentState.b})`}/>
-            </div>
-            <div style={{ paddingTop: '1rem', fontWeight: 'bold' }}>
-                Now, adjust the scales to what you think is the correct RYB value!
-            </div>
-            <input type="range" defaultValue={componentState.red} value={componentState.red} min="0" max="255" onChange={(e) => handleChange("red", e.target.value)}/>
-            <input type="range" defaultValue={componentState.yellow} value={componentState.yellow} min="0" max="255" onChange={(e) => handleChange("yellow", e.target.value)}/>
-            <input type="range" defaultValue={componentState.blue} value={componentState.blue} min="0" max="255" onChange={(e) => handleChange("blue", e.target.value)}/>
-        </div>
         </div>
     )
 
