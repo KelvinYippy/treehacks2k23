@@ -64,7 +64,7 @@ export const ColorIdentificationPage = () => {
         <div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '1rem' }}>
             <div style={{ textAlign: 'center', paddingTop: '1rem', fontWeight: 'bold', fontSize: '2.25rem' }}>
-                Color Identification
+                Fill In The Color
             </div>
             <div style={{ paddingTop: '1rem', fontWeight: 'bold' }}>
                 Number Answered Correctly: {componentState.correctQuestions}
