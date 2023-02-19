@@ -4,19 +4,19 @@
     margin: 1rem;
     cursor: pointer;
     border-radius: 10px;
-    background-color: #FFF4FA;
+    background-color: #FFCCE8;
     font-weight: bold;
     height: 530px;
 }
 
 .home-card-one .subtext {
-    color: #FFF4FA;
+    color: #FFCCE8;
     font-size: 1.5rem;
 }
 
 .home-card-one:hover {
     background-color: #FF289A;
-    color: #FFF4FA
+    color: #FFCCE8
 }
 
 .home-card-two {
@@ -25,19 +25,19 @@
     margin: 1rem;
     cursor: pointer;
     border-radius: 10px;
-    background-color: #FBF8EE;
+    background-color: #FFF8DD;
     font-weight: bold;
     height: 530px;
 }
 
 .home-card-two .subtext {
-    color: #FBF8EE;
+    color: #FFF8DD;
     font-size: 1.5rem;
 }
 
 .home-card-two:hover {
     background-color: #FFC700;
-    color: #FBF8EE;
+    color: #FFF8DD;
 }
 
 .home-card-three {
@@ -46,18 +46,18 @@
     margin: 1rem;
     cursor: pointer;
     border-radius: 10px;
-    background-color: #E7F7F4;
+    background-color: #9AF3DF;
     font-weight: bold;
     height: 530px;
 }
 
 .home-card-three:hover {
     background-color: #00B78E;
-    color: #E7F7F4;
+    color: #9AF3DF;
 }
 
 .home-card-three .subtext {
-    color: #E7F7F4;
+    color: #9AF3DF;
     font-size: 1.5rem;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .home-card-one:hover > .square-one {
-    background-color: #FFF4FA !important;
+    background-color: #FFCCE8 !important;
 }
 
 .square-two {
@@ -81,7 +81,7 @@
 }
 
 .home-card-two:hover > .square-two {
-    background-color: #FBF8EE !important;
+    background-color: #FFF8DD !important;
 }
 
 .square-three {
@@ -92,5 +92,5 @@
 }
 
 .home-card-three:hover > .square-three {
-    background-color: #E7F7F4;
+    background-color: #9AF3DF;
 }

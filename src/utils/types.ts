@@ -8,6 +8,8 @@ export enum Page {
 export interface QuestionCardProps {
     handleCorrect: () => void
     handleAnswer: () => void
+    timeRemaining: number
+    setTimeRemaining: (timeRemaining: number) => void 
 }
 
 export interface ColorPageProps {

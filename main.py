@@ -1,10 +1,5 @@
-# # https://convertingcolors.com/rgb-color-80_51_16.html
-
 from bs4 import BeautifulSoup
 from requests import get
-
-# def 
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
